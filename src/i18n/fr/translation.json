@@ -1,0 +1,36 @@
+{
+    "common": {
+        "ok": "Ok",
+        "add": "Ajouter",
+        "next": "Suivant",
+        "update": "Modifier",
+        "save": "Sauvegarder",
+        "delete": "Supprimer",
+        "cancel": "Annuler",
+        "more": "voir"
+    },
+    "views" : {
+        "errorBounday": {
+            "title": "Ooops! Vous avez a rencontré une erreur fatale",
+            "description": "Une erreur est survenue et a été transmise. Merci de réessayer à nouveau.",
+            "redirectToHome": "Retour à l'acceuil"
+        },
+        "creation": {
+            "title": "Profile",
+            "subtitle": "Création de votre profile",
+            "name": "Votre Nom",
+            "cuisines": "Ajoutez vos cuisines préférées"
+        },
+        "home": {
+            "title": "Acceuil",
+            "spinMe": "Tournez-moi",
+            "winningCuisine": "Votre cuisine choisie est: "
+        },
+        "placeInfo": {
+            "link": "Lien"
+        },
+        "suggestions": {
+            "title": "Suggestions"
+        }
+    }
+}

@@ -1,0 +1,143 @@
+.wheel {
+    position: relative;
+    max-width: 100%;
+    margin: 4em auto 1em;
+    font-weight: bold;
+    font-size: 16px;
+    width: 500px;
+    height: 500px;
+
+    .sWheel-wrapper {
+        width: 500px;
+        height: 500px;
+        font-size: 100%;
+        position: relative;
+    }
+
+    .sWheel-inner {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .sWheel,
+    .sWheel > .sWheel-bg-layer,
+    .sWheel > .sWheel-txt-wrap,
+    .sWheel > .sWheel-txt-wrap > .sWheel-txt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .sWheel {
+        transform: rotate(7deg);
+        border-radius: 100%;
+        overflow: hidden;
+        &.rotate {
+            animation-name: spinWheel;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        &.paused {
+            animation-play-state: paused;
+        }
+
+        & > .sWheel-txt-wrap,
+        & > .sWheel-bg-layer {
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+        & > .sWheel-bg-laye,
+        & > .sWheel-txt-wrap > .sWheel-txt {
+            margin: 0 auto;
+            border-radius: 100%;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+            color: #ecf0f1;
+        }
+        & > .sWheel-bg-layer > svg {
+            margin: 0 auto;
+            border-radius: 50%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        & > .sWheel-txt-wrap > .sWheel-txt > div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            box-sizing: border-box;
+            line-height: 1.2em;
+            max-height: 23.4em;
+            text-align: right;
+            transform-origin: 0 1px;
+            width: 50%;
+            padding-right: 6%;
+            font-weight: bold;
+            font-size: 100%;
+            cursor: default;
+            color: #fff;
+            text-align: right;
+        }
+    }
+
+    .sWheel-center {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        text-align: center;
+    }
+
+    .sWheel-marker {
+        border-spacing: 90px;
+        width: 10%;
+        position: absolute;
+        left: 53%;
+        top: -18%;
+        margin-top: 7%;
+        margin-left: -8%;
+        -webkit-transition: 0.2 rotate linear;
+        transition: 0.2 rotate linear;
+        z-index: 1;
+        display: block;
+        transform: rotate(0deg);
+        transform-origin: 50% 35%;
+        &.rotate {
+            animation-name: spinMarker;
+            animation-duration: 250ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+    }
+}
+
+@keyframes spinMarker {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes spinWheel {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# Random Cuisine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An idea to help your team to choose a cuisine for lunch.
+
+## Demo
+
+![Demo](./docs/demo.gif)
+
+## Requirements
+
+For running this project, you will need just an API key of [Google Places](https://developers.google.com/maps/documentation/places/web-service/overview)
+>Note: You should enable the **Places** & **Maps Javascript** APIs
+
+![Google API](./docs/goolge_apis.png)
 
 ## Available Scripts
 
